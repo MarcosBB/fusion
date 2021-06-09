@@ -19,12 +19,12 @@ class Base(models.Model):
 
 class Servico(Base):
     ICONE_CHOICES = (
-        ('lni-cog', 'Engrenagens'),
+        ('lni-cog', 'Engrenagem'),
         ('lni-stats-up', 'Gráfico'),
         ('lni-user', 'Usuário'),
         ('lni-layers', 'Design'),
         ('lni-mobile', 'Mobile'),
-        ('lni-ricket', 'Foguete'),
+        ('lni-rocket', 'Foguete'),
     )
     servico = models.CharField('Serviço', max_length=100)
     descricao = models.TextField('Descrição', max_length=200)
@@ -63,3 +63,23 @@ class Funcionario(Base):
 
     def __str__(self):
         return self.nome 
+
+
+class Recurso(Base):
+    ICONE_CHOICES = (
+        ('lni-cog', 'Engrenagem'),
+        ('lni-laptop-phone', 'Notebook'),
+        ('lni-leaf', 'Folha'),
+        ('lni-layers', 'Design'),
+        ('lni-rocket', 'Foguete'),
+    )
+    recurso = models.CharField('Recurso', max_length=100)
+    descricao = models.TextField('Descrição', max_length=200)
+    icone = models.CharField('Icone', max_length=100, choices=ICONE_CHOICES)
+
+    class Meta:
+        verbose_name= 'Recurso'
+        verbose_name_plural = 'Recursos'
+
+    def __str__(self):
+        return self.recurso

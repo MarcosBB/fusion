@@ -7,78 +7,21 @@
         <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
       </div>
       <div class="row">
+
+        {% for s in servicos %}
         <!-- Services item -->
         <div class="col-md-6 col-lg-4 col-xs-12">
           <div class="services-item wow fadeInRight" data-wow-delay="0.3s">
             <div class="icon">
-              <i class="lni-cog"></i>
+              <i class="{{ s.icone }}"></i>
             </div>
             <div class="services-content">
-              <h3><a href="#">Fácil de Usar</a></h3>
-              <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt bibendum gravida. </p>
+              <h3><a href="#">{{ s.servico }}</a></h3>
+              <p>{{ s.descricao }} </p>
             </div>
           </div>
         </div>
-        <!-- Services item -->
-        <div class="col-md-6 col-lg-4 col-xs-12">
-          <div class="services-item wow fadeInRight" data-wow-delay="0.6s">
-            <div class="icon">
-              <i class="lni-stats-up"></i>
-            </div>
-            <div class="services-content">
-              <h3><a href="#">Design Incrível</a></h3>
-              <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt bibendum gravida. </p>
-            </div>
-          </div>
-        </div>
-        <!-- Services item -->
-        <div class="col-md-6 col-lg-4 col-xs-12">
-          <div class="services-item wow fadeInRight" data-wow-delay="0.9s">
-            <div class="icon">
-              <i class="lni-users"></i>
-            </div>
-            <div class="services-content">
-              <h3><a href="#">Fácil de Customizar</a></h3>
-              <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt bibendum gravida. </p>
-            </div>
-          </div>
-        </div>
-        <!-- Services item -->
-        <div class="col-md-6 col-lg-4 col-xs-12">
-          <div class="services-item wow fadeInRight" data-wow-delay="1.2s">
-            <div class="icon">
-              <i class="lni-layers"></i>
-            </div>
-            <div class="services-content">
-              <h3><a href="#">UI/UX Design</a></h3>
-              <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt bibendum gravida. </p>
-            </div>
-          </div>
-        </div>
-        <!-- Services item -->
-        <div class="col-md-6 col-lg-4 col-xs-12">
-          <div class="services-item wow fadeInRight" data-wow-delay="1.5s">
-            <div class="icon">
-              <i class="lni-mobile"></i>
-            </div>
-            <div class="services-content">
-              <h3><a href="#">Desenvolvimento de Aplicativos</a></h3>
-              <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt bibendum gravida. </p>
-            </div>
-          </div>
-        </div>
-        <!-- Services item -->
-        <div class="col-md-6 col-lg-4 col-xs-12">
-          <div class="services-item wow fadeInRight" data-wow-delay="1.8s">
-            <div class="icon">
-              <i class="lni-rocket"></i>
-            </div>
-            <div class="services-content">
-              <h3><a href="#">Interface Amigável </a></h3>
-              <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt bibendum gravida. </p>
-            </div>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </section>
