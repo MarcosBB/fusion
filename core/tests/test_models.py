@@ -31,7 +31,7 @@ class FuncionarioTestCase(TestCase):
         self.funcionario = mommy.make('Funcionario')
 
     def test_str(self):
-        self.assertEquals(str(self.funcionario), self.funcionario.funcionario)
+        self.assertEquals(str(self.funcionario), self.funcionario.nome)
 
 class RecursoTestCase(TestCase):
     def setUp(self):
